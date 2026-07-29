@@ -287,3 +287,39 @@ background-color:#faf8f5;
 font-weight:500;
 color:#5b6b5c;
 }
+
+/* === 預約頁面表單外框美化 === */
+.booking-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 淡淡的高級感陰影 */
+    display: flex;
+    justify-content: center;
+}
+
+.booking-section iframe {
+    max-width: 640px; /* 限制表單最大寬度，在平板上才不會被拉得太肥 */
+    width: 100%;
+    border: none;
+}
+
+/* === 導向預約頁面的質感咖啡色按鈕 === */
+.booking-btn {
+    display: inline-block;
+    background-color: #4A3525; /* 統一使用你的優雅深咖啡色 */
+    color: #FFFFFF !important;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;       /* 圓角按鈕 */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 53, 37, 0.2);
+}
+
+.booking-btn:hover {
+    background-color: #5C4033; /* 滑鼠滑過時變淺一點點 */
+}
