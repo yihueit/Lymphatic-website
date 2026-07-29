@@ -61,10 +61,20 @@ h2 {
 
 p, li {
   font-size: 1.4rem;
-  front-weight: 600;
+  font-weight: 600;
   color: #555555;
   line-height: 1.6;
 }
+/* 讓「了解照護手法與使用產品」等引導連結變大 */
+header a, .content a:not(.booking-btn):not(.footer-link) {
+    font-size: 1.2rem;       /* 放大字體 */
+    color: #0066cc;          /* 保留原本的藍色 */
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
 ul{
    padding-left:20px;
    margin-bottom:25px;
@@ -80,7 +90,13 @@ section {
 
 a {
   color: #0066cc;
-  text-decoration: none;
+  text-decoration: underline;
+}
+.content a:not(.booking-btn):not(.footer-link){ 
+ font-size: 1.3rem;
+  display: block;
+  text-align:center;
+  margin: 20px auto;
 }
 .hero {
   width: 100%;
@@ -153,52 +169,33 @@ a {
   line-height: 1.8;   /* 行距 */
 }
 .nav {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-.nav {
-  background-color: #f2e9e4;   /* 溫暖米杏色 */
-  padding: 14px 0;
-  text-align: center;
+  display:flex;
+  justify-content:flex-end;
+  padding: 14px 40px;
+  background-color: #f2e9e4;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .nav a {
   display: inline-block;
-  padding: 8px 18px;
-  margin: 0 8px;
-  background-color: #ffffff;
-  border-radius: 20px;
+  font-size: 1.1rem;
+  color: #4A3525;
   text-decoration: none;
-  color: #444;
   font-weight: 500;
+  padding: 8px 18px
+  margin: 0 8px;
+  background-color:#ffffff
+  border-radius :20px;
+  transition: all 0.3 ease;
 }
 
 .nav a:hover {
-  background-color: #e7dcd4;
-}
-
-.nav a.active {
   background-color: #dcc8bb;
-  font-weight: 600;
+  gont-weight:600;
+  color: #4A3525
 }
-
-nav {
-  text-align: right;
-  margin-bottom: 20px;
-  font-size: 0.6em;
-}
-
+.
 .pricing-grid {
   flex: 0 1 250px;
   border:1px solid #d8d2c8
@@ -322,4 +319,53 @@ color:#5b6b5c;
 
 .booking-btn:hover {
     background-color: #5C4033; /* 滑鼠滑過時變淺一點點 */
+}
+
+/* === 底部選單樣式美化 === */
+.footer-nav {
+    display: flex;
+    justify-content: center;   /* 讓底部選單在畫面正中間 */
+    flex-wrap: wrap;           /* 手機版空間不夠時自動換行 */
+    gap: 15px;                 /* 按鈕之間的間距 */
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid #d8d2c8; /* 加上一條精緻的頂部分隔線 */
+}
+
+.footer-nav a {
+    display: inline-block;
+    font-size: 1rem;
+    color: #4A3525;            /* 質感深咖啡色 */
+    text-decoration: none;
+    background-color: #ffffff; /* 白色背景 */
+    padding: 8px 16px;         /* 做出漂亮的按鈕外框 */
+    border-radius: 20px;       /* 圓角造型 */
+    border: 1px solid #d8d2c8; /* 淡淡的邊框 */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
+    background-color: #4A3525; /* 滑鼠移上去時，按鈕變成深咖啡底 */
+    color: #ffffff;            /* 字體變成白色 */
+}
+
+/* 強制將導覽列連結轉為圓角白色按鈕 */
+.nav a {
+    display: inline-block !important;
+    font-size: 1.1rem !important;
+    color: #4A3525 !important;            /* 質感深咖啡色 */
+    text-decoration: none !important;
+    background-color: #ffffff !important; /* 強制白色背景 */
+    padding: 8px 18px !important;         /* 做出漂亮的上下左右按鈕厚度 */
+    border-radius: 20px !important;       /* 圓角膠囊造型 */
+    margin-left: 15px !important;         /* 兩個按鈕之間的距離 */
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 淡淡的微陰影，看起來更立體 */
+}
+
+/* 滑鼠移上去或點擊時的溫柔變色 */
+.nav a:hover {
+    background-color: #e7dcd4 !important; /* 變成粉柔色 */
+    text-decoration: none !important;
 }
